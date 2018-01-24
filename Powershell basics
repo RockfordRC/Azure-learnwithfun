@@ -4,3 +4,18 @@ Get-Module PowerShellGet -list | Select-Object Name,Version,Path
 # Install the Azure Resource Manager modules from the PowerShell Gallery
 Install-Module AzureRM -AllowClobber 
 # AllowClobber option is required when you have old version of Azure module
+
+#Import AzureRM module
+Import-Module AzureRM
+
+# To verify the installation was successful, run from your command line.
+Get-Module AzureRM -ListAvailable 
+
+# Get a list of all subscriptions in your account.
+Get-AzureRmSubscription
+
+# Select Subscription be below command this will set below subscription as default
+Select-AzureRmSubscription -SubscriptionName "Enter Subscription name"
+
+#Verify the change by running all the commands will run for this subscription 
+Get-AzureRmContext
