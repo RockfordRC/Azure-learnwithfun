@@ -1,0 +1,6 @@
+# Getting Started With Azure Powershell
+Get-Module PowerShellGet -list | Select-Object Name,Version,Path
+
+# Install the Azure Resource Manager modules from the PowerShell Gallery
+Install-Module AzureRM -AllowClobber 
+# AllowClobber option is required when you have old version of Azure module
