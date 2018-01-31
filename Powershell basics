@@ -19,3 +19,10 @@ Select-AzureRmSubscription -SubscriptionName "Enter Subscription name"
 
 #Verify the change by running all the commands will run for this subscription 
 Get-AzureRmContext
+
+======================================================================================
+# Login to Azure RM account 
+Login-AzureRmAccount or use 
+
+Get-AzureRmSubscription
+
