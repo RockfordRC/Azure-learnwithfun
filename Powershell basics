@@ -5,24 +5,23 @@ Get-Module PowerShellGet -list | Select-Object Name,Version,Path
 Install-Module AzureRM -AllowClobber 
 # AllowClobber option is required when you have old version of Azure module
 
-#Import AzureRM module
-Import-Module AzureRM
-
 # To verify the installation was successful, run from your command line.
 Get-Module AzureRM -ListAvailable 
 
-# Get a list of all subscriptions in your account.
+#run below command first from local
+Import-module azurerm
+
+# Login to Azure RM account 
+Login-AzureRmAccount or use 
+
+#list all the subscription you have
 Get-AzureRmSubscription
 
-# Select Subscription be below command this will set below subscription as default
-Select-AzureRmSubscription -SubscriptionName "Enter Subscription name"
+# select the subscristion you want to work with below command 
+Select-AzureRmSubscription -Subscriptionname 'nameofsubscription'
 
 #Verify the change by running all the commands will run for this subscription 
 Get-AzureRmContext
 
-======================================================================================
-# Login to Azure RM account 
-Login-AzureRmAccount or use 
 
-Get-AzureRmSubscription
 
